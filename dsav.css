@@ -1,54 +1,82 @@
 *{
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	font-family: 'poppins', sans-serif;
-	font-size: 18px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
 }
 body{
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5; /* Light background for contrast */
 }
 .container{
-	width: 500px;
-	padding: 30px;
-	border: 1px solid #eeeeee;
-	border-radius: 10px;
-	background-color: #003b5b;
+    width: 500px;
+    padding: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background-color: #ffffff; /* Changed to white for a cleaner look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 h4{
-	margin-bottom: 10px;
-	font-size: 24px;
-	color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333; /* Darker color for better readability */
+    text-align: center; /* Center the heading */
 }
-input{
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 10px;
+input, select{
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+select{
+    appearance: none; /* Remove default arrow in some browsers */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7z%22%20fill%3D%22%23333333%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 7px;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 textarea{
-	width: 100%;
-	padding: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical; /* Allow vertical resizing */
 }
 #submit{
-	border: none;
-	background-color: orangered;
-	color: white;
-	width: 100%; /* Full width for better alignment */
-	padding: 12px;
-	margin-top: 10px;
-	border-radius: 5px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s; /* Smooth transitions */
+    border: none;
+    background-color: orangered;
+    color: white;
+    width: 100%; /* Full width for better alignment */
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.1s; /* Smooth transitions */
 }
 #submit:hover{
-	background-color: #333333;
+    background-color: #333333;
 }
 #submit:active{
-	background-color: darkorange; /* Slightly darker on press */
-	transform: translateY(2px); /* Move button down by 2px */
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow to simulate pressing */
+    background-color: darkorange; /* Slightly darker on press */
+    transform: translateY(2px); /* Move button down by 2px */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow to simulate pressing */
+}
+#submit:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.5); /* Orange focus ring */
+}
+.alert {
+    margin-top: 15px;
+    font-size: 16px;
 }
