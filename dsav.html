@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    
+	<link rel="stylesheet" href="dsav.css">
+	<script>
+    	async function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var formData = new FormData(event.target);
+        
+        try {
+            let response = await fetch("https://script.google.com/macros/s/AKfycbx_YFozaeypI50wb77ioPvZT1RThOJrIVyimJzOUi_fJjlBNO1H9Hh8nuL4LcHld6ey/exec", {
+                method: 'POST',
+                body: formData
+            });
+
+            let result = await response.text();
+            
+            // Display the reference ID in a message
+            alert(result); // Show the reference ID in an alert
+            
+            // Clear the form fields
+            event.target.reset(); // Clear the form fields
+            
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+</script>
 </head>
 <body>
-    <script src="https://sheetdb.io/s/f/hkxgpktno4xvt.js"></script>
+	<div class="container">
+		<form onsubmit="handleSubmit(event)">
+			<h4>Member Information</h4>
+			<input type="text" id="name" name="name" placeholder="Name">
+			<input type="text" id="batchyear" name="batchyear" placeholder="Passout Year">
+			<input type="text" id="address" name="address" placeholder="Address">
+			<input type="text" id="mobileno" name="mobileno" placeholder="Phone No">
+			<input type="email" id="email" name="email" placeholder="Email">
+			<input type="text" id="membership" name="membership" placeholder="Membership">
+			
+			<input type="submit" value="Submit" id="submit">
+
+		</form>
+	</div>
+
+
 </body>
 </html>
